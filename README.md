@@ -1,63 +1,37 @@
-# TOC Project 2019
+# TOC-Project F74052308 許芸禎
+聊天機器人: 威廉・莎士比亞William Shakespeare
 
-Template Code for TOC Project 2019
+## 使用方法
+1. 開啟ngrok
+2. 執行app.py
+3. 開啟機器人並輸入訊息
 
-A Facebook messenger bot based on a finite state machine
+## 如何和機器人互動
+1. 使用者輸入莎士比亞著名的四大喜劇和四大悲劇的其中一部英文劇名，範例如下：
+> Romeo and Juliet(羅密歐與茱麗葉)
+> King Lear(李爾王)
+> Othello（奧賽羅）
+> Hamlet（哈姆雷特）
+> A Midsummer Night's Dream（仲夏夜之夢）
+> The Merchant of Venice（威尼斯商人）
+> Much Ado about Nothing（無事生非）
+> twelfth night, or what you will（第十二夜）
 
-More details in the [Slides](https://hackmd.io/p/SkpBR-Yam#/)
+2. 機器人會回覆該劇中一段著名的英文台詞
+3. 使用者再輸入講這句台詞的角色，和上述劇本對應的角色如下。機器人等到使用者答對後才會做出反應：good guess, you're right!
+>Juliet
+>King Lear
+>Othello
+>Hamlet
+>Helena
+>Jessica
+>Claudio
+>Orsino 
 
-## Setup
+4. 使用者也可以在輸入劇名之後輸入: picture please,機器人就會回覆使用者該劇的藝術作品圖片
 
-### Prerequisite
-* Python 3
-* Facebook Page and App
-* HTTPS Server
-
-#### Install Dependency
-```sh
-pip install -r requirements.txt
-```
-
-* pygraphviz (For visualizing Finite State Machine)
-    * [Setup pygraphviz on Ubuntu](http://www.jianshu.com/p/a3da7ecc5303)
-
-#### Secret Data
-
-`VERIFY_TOKEN` and `ACCESS_TOKEN` **MUST** be set to proper values.
-Otherwise, you might not be able to run your code.
-
-#### Run Locally
-You can either setup https server or using `ngrok` as a proxy.
-
-**`ngrok` would be used in the following instruction**
-
-```sh
-./ngrok http 5000
-```
-
-After that, `ngrok` would generate a https URL.
-
-#### Run the sever
-
-```sh
-python3 app.py
-```
-
-## Finite State Machine
-![fsm](./img/show-fsm.png)
-
-## Usage
-The initial state is set to `user`.
-
-Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
-
-* user
-	* Input: "go to state1"
-		* Reply: "I'm entering state1"
-
-	* Input: "go to state2"
-		* Reply: "I'm entering state2"
-
-
-## Reference
-[TOC-Project-2017](https://github.com/Lee-W/TOC-Project-2017) ❤️ [@Lee-W](https://github.com/Lee-W)
+## FSM圖和state說明
+![](https://i.imgur.com/8IOfzTA.jpg)
+使用者輸入劇名->進入stateX(X = 1~8)，之後有兩種走法：
+* 輸入角色名且答對->進入stateRX後回到user
+* 輸入：picture please，進入statePX後回到user
