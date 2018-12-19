@@ -12,146 +12,146 @@ class TocMachine(GraphMachine):
         )
 
     def is_going_to_state1(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'romeo and juliet'
         return False
 
     def is_going_to_state2(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'king lear'
         return False
 
     def is_going_to_state3(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'othello'
         return False
 
     def is_going_to_state4(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'hamlet'
         return False
     
     def is_going_to_state5(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'a midsummer night\'s dream'
         return False
     
     def is_going_to_state6(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'the merchant of venice'
         return False
     
     def is_going_to_state7(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'much ado about nothing'
         return False
     
     def is_going_to_state8(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'twelfth night, or what you will'
         return False
     
     def is_going_to_stateR1(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'juliet'
         
         return False
 
     def is_going_to_stateP1(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'picture please'     
         return False
 
     def is_going_to_stateR2(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'king lear'
         return False
     
     def is_going_to_stateP2(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'picture please'     
         return False
     
     def is_going_to_stateR3(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'lago'
         return False
     
     def is_going_to_stateP3(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'picture please'     
         return False
     
     def is_going_to_stateR4(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'hamlet'
         return False
 
     def is_going_to_stateP4(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'picture please'     
         return False
     
     def is_going_to_stateR5(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'helena'
         return False
     
     def is_going_to_stateP5(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'picture please'     
         return False
     
     def is_going_to_stateR6(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'jessica'
         return False
     
     def is_going_to_stateP6(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'picture please'     
         return False
 
     def is_going_to_stateR7(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'claudio'
         return False
     
     def is_going_to_stateP7(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'picture please'     
         return False
     
     def is_going_to_stateR8(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'orsino'
         return False
     
-    def is_going_to_stateP9(self, event):
-        if event.get("message"):
+    def is_going_to_stateP8(self, event):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == 'picture please'     
         return False
@@ -437,7 +437,7 @@ To sleep: perchance to dream: ay, there’s the rub.")
     def on_exit_stateP8(self):
         print('Leaving P8')
     
-    
+
     
     
     
