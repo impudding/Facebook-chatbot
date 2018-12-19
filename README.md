@@ -8,8 +8,9 @@
 
 ## 如何和機器人互動
 1. 使用者輸入莎士比亞著名的四大喜劇和四大悲劇的其中一部英文劇名，範例如下：
-> Romeo and Juliet(羅密歐與茱麗葉)\n
-> King Lear(李爾王)\n
+> Romeo and Juliet(羅密歐與茱麗葉)  
+
+> King Lear(李爾王)
 > Othello（奧賽羅）
 > Hamlet（哈姆雷特）
 > A Midsummer Night's Dream（仲夏夜之夢）
